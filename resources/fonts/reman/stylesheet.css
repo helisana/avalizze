@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Reman';
+    src: url('Reman.woff2') format('woff2'),
+        url('Reman.woff') format('woff'),
+        url('Reman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
