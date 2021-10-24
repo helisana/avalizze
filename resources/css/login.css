@@ -1,0 +1,138 @@
+.section__login {
+    width: 100%;
+    padding: 180px 0;
+    padding-bottom: 60px;
+}
+
+.section__login .section__title {
+    margin: 0 30px;
+}
+
+.section__login  .section__wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.inputs {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-left: none;
+    padding: 0;
+}
+
+.inputs .link {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #333333;
+}
+
+.form__login .btn-2 {
+    background-color: var(--ocean-blue);
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.form__login div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.form__login .btn-2:hover {
+    background-color: var(--pacific-blue);
+}
+
+.criar__cadastro {
+    width: 100%;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+.criar__cadastro p {
+    text-align: center;
+    margin: 0;
+    color: #333333;
+}
+
+.criar__cadastro .btn-2 {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.form__login input {
+    width: 260px;
+}
+
+@media only screen and (min-width: 1200px) {
+    .section__login {
+        width: 100%;
+        padding: 200px 0;
+        padding-bottom: 60px;
+    }
+
+    .section__login .section__title {
+        margin: auto;
+    }
+
+
+    .section__login  .section__wrapper {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        margin-top: 60px;
+    }
+
+    .inputs {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        width: auto;
+        border-left: 2px solid var(--ocean-blue);
+        padding: 0 60px;
+    }
+
+    .inputs .link {
+        margin-top: 20px;
+        font-size: 14px;
+        text-align: center;
+        color: #333333;
+    }
+
+    .form__login .btn-2 {
+        background-color: var(--ocean-blue);
+        border: none;
+        color: var(--white);
+        cursor: pointer;
+    }
+
+    .form__login .btn-2:hover {
+        background-color: var(--pacific-blue);
+    }
+
+    .criar__cadastro {
+        width: 466px;
+        margin-top: 40px;
+        padding: 20px 0;
+    }
+    .criar__cadastro p {
+        text-align: center;
+        margin: 0;
+        color: #333333;
+    }
+
+    .criar__cadastro .btn-2 {
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .form__login input {
+        width: 340px;
+    }
+
+}
