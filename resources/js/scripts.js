@@ -1,5 +1,5 @@
 function initMobileSidebar() {
-  if (window.innerWidth < 996) {
+  if (window.innerWidth < 1200) {
     const btnMenu = document.querySelector('.navbar__menu-icon');
     const mobileSidebarOverlay = document.querySelector('.mobile-sidebar-overlay');
     const mobileSidebar = document.querySelector('.mobile-sidebar');
@@ -47,7 +47,7 @@ function hideMobileSidebar() {
   const mobileSidebarOverlay = document.querySelector('.mobile-sidebar-overlay');
 
   gsap.to(mobileSidebar,{
-    x: '100%',
+    x: '-100%',
     duration: 0.6,
   });
 
@@ -115,3 +115,8 @@ function hideMobileSidebarSubmenu(menuItem) {
 }
 
 
+function main() {
+  initMobileSidebar();
+}
+
+document.addEventListener('DOMContentLoaded', main);

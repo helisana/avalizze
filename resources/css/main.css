@@ -101,6 +101,7 @@ background-color: rgba(0, 0, 0, 0.68);
 }
 
 .navbar__center {
+  display: none;
   position: absolute;
   justify-content: center;
   width: 100%;
