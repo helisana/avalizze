@@ -245,6 +245,17 @@ background-color: rgba(0, 0, 0, 0.68);
     flex-flow: row nowrap;
   }
 
+  .navbar__menu-icon {
+    display: none;
+    width: 26px;
+    flex-shrink: 0;
+    padding: 0 10px 0 20px ;
+  }
+
+  .navbar__menu-icon svg {
+    fill: var(--white);
+  }
+
   .navbar__center {
     position: absolute;
     justify-content: center;
