@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Avalizze</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./vendor/normalize/normalize.css">
+  <link rel="stylesheet" type="text/css" href="./vendor/flickity/flickity.css">
+  <link rel="stylesheet" type="text/css" href="./resources/css/main.css">
+  <link rel="stylesheet" type="text/css" href="./resources/css/login.css">
+  <link rel="stylesheet" type="text/css" href="./resources/css/cadastro.css">
+  <link rel="stylesheet" type="text/css" href="./resources/css/carrinho.css">
+  <link rel="stylesheet" type="text/css" href="./resources/fonts/reman/stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+  <div class="header__bar"><p><strong>FRETE GRÁTIS</strong> a partir de R$200,00</p></div>
+  <nav class="navbar">
+    <div class="navbar__wrapper">
+      <div class="navbar__left">
+        <a href="javascript:void(0)" class="navbar__menu-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 44.9" style="enable-background:new 0 0 64 44.9" xml:space="preserve"><path d="M.1 1.9c.5-1.5 1.6-2 3.1-2h58c1.4 0 2.4.6 2.7 1.8.5 1.5-.6 3.1-2.2 3.2H3.3c-1.5 0-2.6-.5-3.1-2-.2-.3-.2-.7-.1-1zM.1 21.9c.5-1.5 1.6-2 3.1-2h58c1.4 0 2.4.6 2.7 1.8.5 1.5-.6 3.1-2.2 3.2H3.3c-1.5 0-2.6-.5-3.1-2-.2-.3-.2-.7-.1-1zM.1 41.9c.5-1.5 1.6-2 3.1-2h58c1.4 0 2.4.6 2.7 1.8.5 1.5-.6 3.1-2.2 3.2H3.3c-1.5 0-2.6-.5-3.1-2-.2-.5-.2-.6-.1-1z"/></svg>
+        </a>
+        <div class="navbar__logo">
+          <img src="./resources/img/logo.svg">
+        </div>
+      </div>
+      <div class="navbar__center">
+        <ul class="navbar__menu">
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+      <div class="navbar__right">
+        <ul class="navbar__menu">
+          <li class="navbar__menu-search-icon"><a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.294 16.294">
+            <path id="_93642" data-name="93642" d="M16.108,15.212l-3.976-3.976a6.867,6.867,0,1,0-.9.9l3.977,3.976a.633.633,0,1,0,.9-.9ZM1.267,6.858a5.591,5.591,0,1,1,5.591,5.59A5.6,5.6,0,0,1,1.267,6.858Z"/>
+          </svg>
+          </a></li>
+          <li class="navbar__menu-user-icon"><a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M118 128c-.1-12.8-4.1-24.3-12.3-34.2-9.1-11-20.7-17.6-34.9-19.3-16.4-2-30.9 2.6-43.1 13.7-10.1 9.1-15.8 20.6-17.3 34-.2 1.9-.2 3.8-.3 5.7H.1c1-29.6 16-49.2 42.7-60.7-9.9-7.4-15.5-17.4-15.7-30C26.9 26.9 30.6 18 38 10.8c15.3-15 38.8-13.8 52.7.6 15.3 16 13.6 42.4-5.6 56.1.5.2 1 .4 1.4.6 19.5 7.8 32.5 21.6 38.9 41.7 1.4 4.3 2.2 8.8 2.5 13.4 0 .4.1.8.2 1.2v3.8c-3.4-.2-6.8-.2-10.1-.2zM63.9 64c14.8.1 26.9-12 27.1-26.8.2-14.8-12-27.1-26.9-27.2C49.3 9.9 37.2 21.9 37 36.8 36.8 51.6 49 63.9 63.9 64z"/></svg></a></li>
+          <li class="navbar__menu-cart-icon"><a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.3 128"><path d="M16.9 128c-2.2-.6-4.5-1-6.5-2-5.8-2.6-9.6-7-10.3-13.5-.3-2.7.2-5.4.4-8.1.8-9.1 1.6-18.2 2.4-27.2l2.4-26.7c.6-7 1.3-14.1 1.8-21.1.1-1.6.4-3.2 2.1-4 .7-.3 1.5-.4 2.3-.4H25.7c.7-16 14-25 25.4-25C62.9 0 76 9.3 76.5 24.9h14.3c2.7 0 4 1.2 4.2 3.9 1 10.7 1.9 21.5 2.8 32.2 1 10.7 1.9 21.5 2.9 32.2.5 5.8 1.2 11.5 1.5 17.3.3 5.8-2.5 10.3-7.1 13.7-2.7 2-5.8 3.1-9.1 3.6-.2 0-.5.1-.7.2H16.9zm71.3-95.9H76.4v10.7c0 2-1.6 3.5-3.5 3.4-1.9 0-3.4-1.5-3.5-3.4v-2V32H32.9v9.8c0 2.7-1.3 4.3-3.6 4.3-2.2 0-3.5-1.6-3.5-4.4v-8.5-1.3H14c0 .3-.1.5-.1.7l-3 33.6c-1.2 14.8-2.5 29.4-3.8 44-.2 2.7.7 5 2.5 6.9 2.8 2.9 6.3 3.9 10.2 3.9h62.7c2.4 0 4.7-.4 6.9-1.5 3.3-1.8 5.7-4.3 5.8-8.3.1-2.3-.4-4.6-.6-7-.9-10.8-1.9-21.6-2.8-32.3-1-11.1-2-22.1-3-33.2-.1-2.2-.4-4.4-.6-6.6zm-55.3-7.2h36.4c-.3-6.5-3.1-11.6-8.5-14.9-6.4-4-13-4-19.3 0-5.5 3.3-8.2 8.4-8.6 14.9z"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-sidebar-overlay"></div>
+  <nav class="mobile-sidebar">
+    <div class="mobile-sidebar__wrapper">
+      <div class="mobile-sidebar__header">
+        <p>Navegue por</p>
+        <div class="svg svg--height mobile-sidebar__close">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <path d="M34.1 31.6L63.4 2.3c.8-.9.6-1.6.3-1.8-.2-.2-.8-.5-1.8.4-.2.2-.5.5-.9.8L32.6 30.1l-.6.6-.5-.6L2.7 1.3C2.4.9 2 .6 1.6.3 1.2-.1.6 0 .3.3 0 .5-.2 1 .2 1.5c.3.3.5.7.8 1 9.7 9.7 29.1 29.2 29.1 29.2l.6.6-.6.6S10.9 52.1 1.2 61.7l-.5.5c-.6.7-.6 1.2-.3 1.5.8.9 2.1-.5 2.1-.5l29-29 .5-.5.6.6 29.1 29.1c.2.2.4.4.6.5.4.3.9.2 1.2-.1.4-.4.4-.8.1-1.2-.1-.2-.3-.4-.5-.6L34 32.9l-.6-.5"></path>
+          </svg>
+        </div>
+      </div>
+      <ul class="mobile-sidebar__menu">
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Quem Somos</a></li>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+
+      <ul class="mobile-sidebar__menu">
+        <li class="mobile-navbar__account">
+          <a href="/minha-conta/">
+            <div class="svg svg--height mobile-sidebar__menu-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.6 64">
+                <path d="M26.3 0c1.2.3 2.5.5 3.7 1 3.3 1.3 5.6 3.7 7.2 6.8 3.1 6 3.1 12.1 0 18.1-1.8 3.5-4.5 6.1-8.4 7.2-3.8 1.1-7.3.5-10.5-1.7-4.1-2.8-6.1-6.9-6.8-11.7-.6-4.2 0-8.1 2-11.9 1.9-3.6 4.7-6.2 8.7-7.3.7-.2 1.5-.3 2.2-.5h1.9zm-11 16.6c.1 3.4.9 6.4 2.8 9 3.6 5 9.9 5.2 13.9.6 2-2.3 3-5 3.2-8 .3-4.1-.6-7.9-3.4-11.1C28.3 3.2 23 3 19.3 6.6c-2.9 2.9-3.9 6.4-4 10z"></path>
+                <path d="M11.6 31.1c1.1 1 2 2 3 2.9-.8.6-1.8 1.2-2.7 1.9-5 4.2-7.6 9.6-7.8 16.2 0 1.5.8 2.5 1.8 3.3 1.8 1.4 3.9 2.2 6.1 2.8 5.4 1.5 11 1.8 16.6 1.5 3.4-.2 6.8-.6 10-1.6 2-.6 4-1.4 5.7-2.6 2-1.4 2.3-3.2 2-5.4-.9-7-4.3-12.4-10.2-16.1 0 .1-.1.1-.1 0 1-.9 2-1.9 3.1-2.9 1.6 1 3.2 2.3 4.6 3.9 3.3 3.5 5.5 7.6 6.4 12.4.3 1.6.5 3.3.5 5 0 2.8-1.4 4.9-3.6 6.6-2.2 1.6-4.7 2.6-7.3 3.3-5.7 1.6-11.5 2-17.3 1.7-4-.2-7.9-.7-11.7-1.8-2.1-.6-4.2-1.4-6.1-2.6-3.3-2.1-4.9-5-4.5-9 .5-4.7 2-9.1 4.8-12.9 1.8-2.8 4.2-5 6.7-6.6z"></path>
+              </svg>
+            </div>
+            Minha Conta
+          </a>
+        </li>
+        <li class="mobile-sidebar__cart">
+          <a href="#">
+            <div class="svg svg--height mobile-sidebar__menu-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.3 128">
+                <path d="M16.9 128c-2.2-.6-4.5-1-6.5-2-5.8-2.6-9.6-7-10.3-13.5-.3-2.7.2-5.4.4-8.1.8-9.1 1.6-18.2 2.4-27.2l2.4-26.7c.6-7 1.3-14.1 1.8-21.1.1-1.6.4-3.2 2.1-4 .7-.3 1.5-.4 2.3-.4H25.7c.7-16 14-25 25.4-25C62.9 0 76 9.3 76.5 24.9h14.3c2.7 0 4 1.2 4.2 3.9 1 10.7 1.9 21.5 2.8 32.2 1 10.7 1.9 21.5 2.9 32.2.5 5.8 1.2 11.5 1.5 17.3.3 5.8-2.5 10.3-7.1 13.7-2.7 2-5.8 3.1-9.1 3.6-.2 0-.5.1-.7.2H16.9zm71.3-95.9H76.4v10.7c0 2-1.6 3.5-3.5 3.4-1.9 0-3.4-1.5-3.5-3.4v-2V32H32.9v9.8c0 2.7-1.3 4.3-3.6 4.3-2.2 0-3.5-1.6-3.5-4.4v-8.5-1.3H14c0 .3-.1.5-.1.7l-3 33.6c-1.2 14.8-2.5 29.4-3.8 44-.2 2.7.7 5 2.5 6.9 2.8 2.9 6.3 3.9 10.2 3.9h62.7c2.4 0 4.7-.4 6.9-1.5 3.3-1.8 5.7-4.3 5.8-8.3.1-2.3-.4-4.6-.6-7-.9-10.8-1.9-21.6-2.8-32.3-1-11.1-2-22.1-3-33.2-.1-2.2-.4-4.4-.6-6.6zm-55.3-7.2h36.4c-.3-6.5-3.1-11.6-8.5-14.9-6.4-4-13-4-19.3 0-5.5 3.3-8.2 8.4-8.6 14.9z"></path>
+              </svg>
+            </div>
+            <span class="mobile-sidebar__cart-number hidden">3</span>
+            Meu carrinho
+          </a>
+        </li>
+        <li class="mobile-navbar__logout">
+          <a href="/minha-conta/logout-cliente/?_wpnonce=ea9cba6170">
+            <div class="svg svg--height mobile-sidebar__menu-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 109.8">
+                <path d="M127.7 56.1c-.6.8-1.4 1.7-2.1 2.4-6.7 6.8-13.5 13.5-20.2 20.2-.5.5-1 1-1.7 1.3-1.4.6-3 .1-3.9-1.1-.8-1.2-.7-2.9.5-4.1 3.4-3.4 6.7-6.8 10.1-10.1 2-2 3.9-3.9 6.2-6.1h-60c-1.7-.2-2.9-1.6-3-3.1 0-1.6 1.3-3.1 3-3.2h59.9c-.5-.5-.7-.8-1-1.1l-14.7-14.7c-.5-.5-1-1.2-1.3-1.9-.5-1.3.1-2.7 1.3-3.5 1-.7 2.6-.7 3.6.1.4.3.7.7 1.1 1 6.7 6.7 13.4 13.4 20.1 20.2.7.8 1.5 1.6 2.1 2.4.4.4.4.7 0 1.3z"></path>
+                <path d="M0 55.3v-39C0 8.1 5.6 1.6 13.6.2c1.1-.2 2.2-.2 3.3-.2h50.8C75.8 0 82.1 4.8 84 12.4c.3 1.2.4 2.5.4 3.8.1 3.3 0 13.6 0 17 0 2.1-1.3 3.5-3.2 3.5-1.9 0-3.2-1.4-3.2-3.5 0-3.5 0-14.1-.1-17.6-.1-5.1-4.4-9.3-10.3-9.3H16.7c-4.2 0-7.5 1.7-9.3 5.6-.7 1.4-1 3.1-1 4.7v76.6c0 6.1 4.2 10.2 10.3 10.2h51c6.1 0 10.3-4.1 10.3-10.3V77.5c0-2.1 1.4-3.5 3.2-3.5 1.5 0 3.1 1.2 3 2.6 0 5 .7 16.1-.5 21-1.6 6.8-7.7 11.8-14.7 12.1-3.9.1-7.9.1-11.8.1-13.5 0-27-.1-40.6 0-8.5.1-14.5-5.6-16.1-11.7C.3 96.4 0 94.7 0 93V55.3z"></path>
+              </svg>
+            </div>
+            Sair
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<section class="section section__cadastro">
+  <h2 class="section__title">Carrinho</h2>
+  <div class="section__wrapper">
+    <div class="carrinho">
+      <div class="carrinho__produtos">
+        <div class="carrinho__description">
+          <img class="img__produto" src="./resources/img/vestido.png">
+          <div class="carrinho__produto">
+            <p class="carrinho__produto--description">Descrição do produto:</p>
+            <p class="carrinho__produto--nome">Vestido Folhado Simples</p>
+            <p class="carrinho__produto--valor">R$ 89,90</p>
+          </div>
+          <button class="cancelar__produto">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" class="svg-inline--fa fa-xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"></path></svg>
+          </button>
+        </div>
+        <div class="carrinho__description">
+          <img class="img__produto" src="./resources/img/vestido.png">
+          <div class="carrinho__produto">
+            <p class="carrinho__produto--description">Descrição do produto:</p>
+            <p class="carrinho__produto--nome">Vestido Folhado Simples</p>
+            <p class="carrinho__produto--valor">R$ 89,90</p>
+          </div>
+          <button class="cancelar__produto">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" class="svg-inline--fa fa-xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"></path></svg>
+          </button>
+        </div>
+        <div class="carrinho__description">
+          <img class="img__produto" src="./resources/img/vestido.png">
+          <div class="carrinho__produto">
+            <p class="carrinho__produto--description">Descrição do produto:</p>
+            <p class="carrinho__produto--nome">Vestido Folhado Simples</p>
+            <p class="carrinho__produto--valor">R$ 89,90</p>
+          </div>
+          <button class="cancelar__produto">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" class="svg-inline--fa fa-xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"></path></svg>
+          </button>
+        </div>
+      </div>
+      <div class="carrinho__valor">
+        <h3>Total no carrinho</h3>
+        <div class="valor__subtotal">
+          <p class="title__subtotal">Subtotal</p>
+          <p class="valor__subtotal">R$ 89,90</p>
+        </div>
+        <div class="carrinho__line"></div>
+        <div class="valor__total">
+          <p class="title__total">Total</p>
+          <p class="valor__total">R$ 89,90</p>
+        </div>
+        <div class="carrinho__line"></div>
+        <button class="btn-2 continuae__compra">continuar compra</button>
+        <button class="btn-2 finalizar__compra">Finalizar compra</button>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer__row">
+    <div class="footer__wrapper">
+      <div class="footer__left">
+        <img class="footer__logo" src="./resources/img/logo.svg">
+      </div>
+      <div class="footer__center">
+        <div class="footer__institucional">
+          <h2>INSTITUCIONAL</h2>
+          <ul class="institucional">
+            <li>Quem somos</li>
+            <li>Política de Privacidade</li>
+            <li>Política de Segurança</li>
+          </ul>
+        </div>
+        <div class="footer__institucional">
+          <h2>DÚVIDAS</h2>
+          <ul class="institucional">
+            <li>Entregas</li>
+            <li>Troca e devoluções</li>
+            <li>Fale Conosco</li>
+          </ul>
+        </div>
+        <div class="footer__institucional">
+          <h2>ATENDIMENTO</h2>
+          <ul class="institucional">
+            <li>Seg - Sex: 08h às 18h</li>
+            <li>Sáb: 08h às 13h</li>
+            <li>WhatsApp: (41)9999-9999</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__row2">
+    <div class="footer__adress">
+      <p>(41) 3045-5022 - contato@avalizze.com.br | R. João Borsato, 510 - Portão - Curitiba/PR</p>
+    </div>
+  </div>
+</footer>
+<script src="./vendor/flickity/flickity.pkgd.min.js"></script>
+<script src="./vendor/gsap/gsap.min.js"></script>
+<script src="./resources/js/scripts.js"></script>
+</body>
+</html>
