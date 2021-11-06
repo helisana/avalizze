@@ -119,6 +119,10 @@
     color: var(--white);
 }
 
+.btn-2.continuar__compra {
+    width: 225px;
+}
+
 @media only screen and (min-width: 370px) {
 
     .img__produto {

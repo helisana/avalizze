@@ -63,6 +63,15 @@
     width: 260px;
 }
 
+.btn-2.btn-entrar {
+    color: #fff;
+}
+
+.btn-2.btn-entrar a {
+    color: #fff;
+}
+
+
 @media only screen and (min-width: 1200px) {
 
     .section__cadastro {

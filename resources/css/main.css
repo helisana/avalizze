@@ -43,8 +43,29 @@ body {
 }
 
 .btn {
+  text-decoration: none;
   position: relative;
   cursor: pointer;
+}
+
+.btn-1 {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-2 {
+  text-decoration: none;
+}
+
+.btn-2:hover {
+color: var(--white);
+}
+
+.btn-2.ver-mais {
+  width: 85px;
+}
+.btn-1.cadastro:hover {
+  color: var(--blue-munseo)
 }
 
 .header {
@@ -65,6 +86,7 @@ background-color: rgba(0, 0, 0, 0.68);
   font-size: 13px;
   color: var(--white);
 }
+
 
 /*****************************
       NAVBAR
