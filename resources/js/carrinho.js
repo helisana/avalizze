@@ -22,7 +22,6 @@ function setProdutos() { //armazena
       },
       {
         id: 4,
-
         nome: "Vestido Branco Lasie",
         preco: "R$ 289,90",
         foto: "resources/img/vestido-branco.webp",
