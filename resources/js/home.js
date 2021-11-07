@@ -62,16 +62,10 @@ function home() {
   setProdutos();
   let produtos = getProdutos();
   
-  for (let i = 0; i < produtos.length; i++) {
+  for (let i = 0; i < 3; i++) {
     let produto = produtos[i];
     addProduto(produto);
   }
 }
-
-
-
-
-
-
 
 document.addEventListener('DOMContentLoaded', home);
