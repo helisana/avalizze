@@ -109,6 +109,7 @@ function getProdutos() {
   return produtos;
 }
 
+function getProdutoById(id) {}
 
 function addProduto(produto) {
    let div = document.createElement("div");
@@ -139,7 +140,14 @@ function addProduto(produto) {
    produtos.appendChild(div);
 }
 
-function pagProdutos() {
+function clickComprar(event) {
+  const target = event.currentTarget
+  const id = target.dataset.id
+
+
+}
+
+function carrinho() {
   setProdutos();
   let produtos = getProdutos();
   
@@ -147,6 +155,14 @@ function pagProdutos() {
     let produto = produtos[i];
     addProduto(produto);
   }
+
+  let btnComprarList = document.querySelectorAll('.produto .btn-2')
+
+  for (let i = 0; i < btnComprarList.length; i++) {
+    let btnComprar = btnComprarList[i]
+
+    btnComprar.addEventListener('click', clickComprar)
+  }
 }
 
-document.addEventListener('DOMContentLoaded', pagProdutos);
+document.addEventListener('DOMContentLoaded', carrinho);
