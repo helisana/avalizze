@@ -108,10 +108,28 @@ function getProdutos() {
   return produtos;
 }
 
+function getProdutoBydId(id) {
+  if (typeof id === 'string') {
+    id = parseInt(id)
+  }
+
+  if (id) {
+    const produtos = getProdutos()
+
+    for (let i = 0; i < produtos.length; i++) {
+      const produto = produtos[i]
+
+      if (produto.id === id) return produto
+    }
+  }
+
+  return null
+}
 
 function addProduto(produto) {
    let div = document.createElement("div");
    div.classList.add("produto");
+   div.dataset.id = produto.id;
 
    let img = document.createElement("img");
    img.classList.add("produto__img");
@@ -138,6 +156,40 @@ function addProduto(produto) {
    produtos.appendChild(div);
 }
 
+function getCarrinho() {
+  let carrinho = localStorage.getItem('carrinho')
+
+  if (carrinho) {
+    carrinho = JSON.parse(carrinho)
+    return carrinho
+  } else {
+    return []
+  }
+}
+
+function setCarrinho(arr) {
+  let json = JSON.stringify(arr)
+  localStorage.setItem('carrinho', json)
+}
+
+function adicionarNoCarrinho(produto) {
+  let carrinho = getCarrinho()
+  carrinho.push(produto)
+  setCarrinho(carrinho)
+}
+
+function clickComprar(event) {
+  const target = event.currentTarget;
+  const produto = target.parentNode;
+  const id = produto.dataset.id;
+  const produtoObj = getProdutoBydId(id)
+
+  if (produtoObj) {
+    adicionarNoCarrinho(produtoObj)
+    alert('Produto adicionado no carrinho!')
+  }
+}
+
 function pagProdutos() {
   setProdutos();
   let produtos = getProdutos();
@@ -145,6 +197,14 @@ function pagProdutos() {
   for (let i = 0; i < produtos.length; i++) {
     let produto = produtos[i];
     addProduto(produto);
+  }
+
+  let btnComprarList = document.querySelectorAll('.produto .btn-2');
+
+  for (let i = 0; i < btnComprarList.length; i++) {
+    const btnComprar = btnComprarList[i]
+
+    btnComprar.addEventListener('click', clickComprar)
   }
 }
 
