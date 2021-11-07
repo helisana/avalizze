@@ -1,167 +1,56 @@
-
-function setProdutos() { //armazena
-  if (!localStorage.getItem("produtos")) {
-    let produtos = [
-      {
-        id: 1,
-        nome: "Vestido Folhado Simples",
-        preco: "R$ 119,90",
-        foto: "resources/img/vestido-azul.webp",
-      },
-      {
-        id: 2,
-        nome: "Camisa Jeans Essential",
-        preco: "R$ 189,90",
-        foto: "resources/img/camisa.webp",
-      },
-      {
-        id: 3,
-        nome: "Shorts Sarja Essential",
-        preco: "R$ 119,90",
-        foto: "resources/img/shorts.webp",
-      },
-      {
-        id: 4,
-        nome: "Vestido Branco Lasie",
-        preco: "R$ 289,90",
-        foto: "resources/img/vestido-branco.webp",
-      },
-      {
-        id: 5,
-        nome: "Vestido Preto Cortes",
-        preco: "R$ 299,90",
-        foto: "resources/img/vestido-preto.webp",
-      },
-      {
-        id: 6,
-        nome: "Saia Ruffle Leopardo",
-        preco: "R$ 99,90",
-        foto: "resources/img/saia.webp",
-      },
-      {
-        id: 7,
-        nome: "Blazer Borgonha",
-        preco: "R$ 359,90",
-        foto: "resources/img/blazer.webp",
-      },
-      {
-        id: 8,
-        nome: "Calça Verona Branca",
-        preco: "R$ 249,90",
-        foto: "resources/img/calca.webp",
-      },
-      {
-        id: 9,
-        nome: "Saia Boho",
-        preco: "R$ 89,90",
-        foto: "resources/img/saia2.webp",
-      },
-      {
-        id: 10,
-
-        nome: "Conjunto Valeska",
-        preco: "R$ 239,90",
-        foto: "resources/img/conjunto.webp",
-      },
-      {
-        id: 11,
-        nome: "Vestido Tianna",
-        preco: "R$ 149,90",
-        foto: "resources/img/vestido-marrom.webp",
-      },
-      {
-        id: 12,
-        nome: "Pantalona Borgonha",
-        preco: "R$ 89,90",
-        foto: "resources/img/pantalona.webp",
-      },
-      {
-        id: 13,
-        nome: "Calça Xadrez Selenna",
-        preco: "R$ 239,90",
-        foto: "resources/img/calca2.webp",
-      },
-      {
-        id: 14,
-        nome: "Camisa Malline Branca",
-        preco: "R$ 249,90",
-        foto: "resources/img/camisa2.webp",
-      },
-      {
-        id: 15,
-        nome: "Sueter Rochedo",
-        preco: "R$ 129,90",
-        foto: "resources/img/blusa2.webp",
-      },
-    ]  
-
-    let json = JSON.stringify(produtos);
-
-    localStorage.setItem("produtos", json);
-  }
-}
-
-function getProdutos() {
-  let json = localStorage.getItem("produtos");
+function getProdutosCarrinho() {
+  let json = localStorage.getItem("carrinho");
 
   let produtos = JSON.parse(json);
 
   return produtos;
 }
 
-function getProdutoById(id) {}
-
 function addProduto(produto) {
    let div = document.createElement("div");
-   div.classList.add("produto");
+   div.classList.add("carrinho__description");
 
    let img = document.createElement("img");
-   img.classList.add("produto__img");
+   img.classList.add("img__produto");
    img.src = produto.foto;
 
-   let h2 = document.createElement("h2");
-   h2.classList.add("produto__titulo");
-   h2.innerHTML = produto.nome;
+   let carrinhoProduto = document.createElement("div");
+   carrinhoProduto.classList.add("carrinho__produto");
 
-   let p = document.createElement("p");
-   p.classList.add("produto__valor");
-   p.innerHTML = produto.preco;
+   let carrinhoProdutoDescription = document.createElement("p");
+   carrinhoProdutoDescription.classList.add("carrinho__produto--description");
+   carrinhoProdutoDescription.innerHTML = "Descrição do produto:";
 
-   let button = document.createElement("button");
-   button.classList.add("btn-2");
-   button.innerHTML = "Comprar";
+   let carrinhoProdutoNome = document.createElement("p");
+   carrinhoProdutoNome.classList.add("carrinho__produto--nome");
+   carrinhoProdutoNome.innerHTML = produto.nome;
+
+   let carrinhoProdutoValor = document.createElement("p");
+   carrinhoProdutoValor.classList.add("carrinho__produto--valor");
+   carrinhoProdutoValor.innerHTML = produto.preco;
+
+   carrinhoProduto.appendChild(carrinhoProdutoDescription);
+   carrinhoProduto.appendChild(carrinhoProdutoNome);
+   carrinhoProduto.appendChild(carrinhoProdutoValor);
+
+   let cancelarProduto = document.createElement('button');
+   cancelarProduto.classList.add('cancelar__produto');
+   cancelarProduto.innerHTML = '<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" class="svg-inline--fa fa-xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"></path></svg>';
 
    div.appendChild(img);
-   div.appendChild(h2);
-   div.appendChild(p);
-   div.appendChild(button);
+   div.appendChild(carrinhoProduto);
+   div.appendChild(cancelarProduto);
 
-   let produtos = document.querySelector(".produtos");
+   let produtos = document.querySelector(".carrinho__produtos");
    produtos.appendChild(div);
 }
 
-function clickComprar(event) {
-  const target = event.currentTarget
-  const id = target.dataset.id
-
-
-}
-
 function carrinho() {
-  setProdutos();
-  let produtos = getProdutos();
+  let produtos = getProdutosCarrinho();
   
   for (let i = 0; i < produtos.length; i++) {
     let produto = produtos[i];
     addProduto(produto);
-  }
-
-  let btnComprarList = document.querySelectorAll('.produto .btn-2')
-
-  for (let i = 0; i < btnComprarList.length; i++) {
-    let btnComprar = btnComprarList[i]
-
-    btnComprar.addEventListener('click', clickComprar)
   }
 }
 
