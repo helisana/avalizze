@@ -190,7 +190,7 @@ function clickComprar(event) {
   }
 }
 
-function pagProdutos() {
+function produtosMain() {
   setProdutos();
   let produtos = getProdutos();
   
@@ -208,4 +208,4 @@ function pagProdutos() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', pagProdutos);
+document.addEventListener('DOMContentLoaded', produtosMain);
